@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: "Montserrat", sans-serif;
   height: 100%;
-  background-color: #000000cf;
+  background-color: #ffffffcf;
 }
 
 img {
@@ -82,12 +82,8 @@ img {
   background-color: #f1f1f1;
 }
 
-main {
-  margin: 2rem 7rem 0 7rem;
-}
-
 .sobre-nosotros {
-  margin: 6rem 0 6rem 0;
+  margin: 6rem 7rem 6rem 7rem;
   background-color: #000;
   border-radius: 100px;
   display: flex;
@@ -129,22 +125,26 @@ main {
 .encabezado-main {
   font-weight: bolder;
   margin-bottom: -15px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  margin-right: 7rem;
+  margin-left: 7rem;
 }
 
 hr {
-  border: 1px solid #ffffff;
+  margin-right: 7rem;
+  margin-left: 7rem;
+  border: 1px solid #000000;
   opacity: 1;
 }
 
 .container-main-carteras {
   display: flex;
   width: 100%;
-  margin-top: 2rem;
   box-sizing: border-box;
 }
 
 .cartera-grande {
+  margin-left: 7rem;
   padding: 0;
   max-width: 845px;
   list-style: none;
@@ -153,8 +153,22 @@ hr {
 
 .listas-carteras-grandes {
   margin-bottom: 4rem;
-  box-shadow: 0px 1px 10px 2px black;
-  background-color: rgba(255, 255, 255, 0.727);
+  box-shadow: 0px 1px 10px 1px rgb(59, 59, 59);
+  background-color: rgba(0, 0, 0, 0.802);
+}
+
+.titulo-carteras-grandes {
+  color: white;
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-top: 20px;
+  text-align: center;
+}
+.texto-carteras-grandes {
+    color: rgba(255, 255, 255, 0.786);
+  font-weight: 600;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .texto-carteras {
@@ -180,14 +194,21 @@ hr {
   list-style: none;
   margin: 0 2rem 2rem 2rem;
   max-width: 350px;
-  box-shadow: 0px 1px 10px 2px black;
-  background-color: rgba(255, 255, 255, 0.727);
+  box-shadow: 0px 1px 10px 1px rgb(59, 59, 59);
+  background-color: rgba(0, 0, 0, 0.802);
 }
 
 .titulo-carteras {
+  text-align: center;
+  color: white;
   font-weight: bolder;
   margin-top: 20px;
 }
+
+.texto-carteras-chicas{
+    color: rgba(255, 255, 255, 0.786);
+}
+
 
 /* Estilos para los elementos li */
 .item {
@@ -237,7 +258,7 @@ hr {
 }
 
 .overlay-content {
-  background-color: #fff;
+  background-color: #060606c3;
   padding: 20px;
   border-radius: 10px;
   max-width: 60%;
@@ -262,9 +283,11 @@ hr {
   max-width: 70%;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .overlay-text h6 {
+    text-align: center;
   font-size: 1.5rem;
   margin-bottom: 10px;
   padding: 10px;
@@ -299,6 +322,13 @@ hr {
   justify-content: space-around;
 }
 
+.art-serv-back {
+  background-color: #9d9d9d56;
+  max-height: 700px;
+  padding: 1rem 0 5rem 0;
+  margin-bottom: 3rem;
+}
+
 .carousel-container {
   max-width: 80%; /* Ajusta el ancho del contenedor del carrusel */
   margin: 0 auto; /* Centra el contenedor del carrusel */
@@ -309,9 +339,10 @@ hr {
   object-fit: cover; /* Ajusta el modo de ajuste de las imágenes para que se vean bien dentro del carrusel */
 }
 
-.carousel-control-next, .carousel-control-prev{
-    width: 10%;
-    background-color: black;
+.carousel-control-next,
+.carousel-control-prev {
+  width: 10%;
+  background-color: black;
 }
 
 .contact-form-container {
