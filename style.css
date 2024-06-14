@@ -1,13 +1,24 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
   height: 100%;
+  width: 100%;
   background-color: #ffffffcf;
 }
 
+/* Estilos para imágenes */
 img {
   border-radius: 1px;
+}
+
+/* Estilos para encabezado */
+h2{
+  font-size: 4rem;
+}
+
+main{
+  width: 100%;
 }
 
 .container-header {
@@ -33,6 +44,15 @@ img {
   font-weight: bold;
   font-size: 2rem;
   margin-left: 10px; /* Espacio entre el logo y el título */
+}
+
+/* Estilos para menú desplegable */
+.menu-content {
+  display: none;
+}
+
+.menu-content.show {
+  display: block;
 }
 
 .menu-button {
@@ -82,8 +102,16 @@ img {
   background-color: #f1f1f1;
 }
 
+/* Estilos para sección "Sobre Nosotros" */
+.container-sobre-nosotros{
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .sobre-nosotros {
-  margin: 6rem 7rem 6rem 7rem;
+  margin: 6rem 10rem;
   background-color: #000;
   border-radius: 100px;
   display: flex;
@@ -96,7 +124,7 @@ img {
 
 .introduccion {
   margin: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat";
 }
 
 .introduccion h3 {
@@ -106,264 +134,227 @@ img {
   white-space: pre-wrap; /* Para asegurar que el texto se ajusta correctamente */
 }
 
-/* Definición de la animación */
-@keyframes fadeIn {
-  from {
-    opacity: 0; /* Empieza con opacidad 0 (invisible) */
-    transform: translateY(50px); /* Desplazamiento hacia abajo */
-  }
-  to {
-    opacity: 1; /* Termina con opacidad 1 (visible) */
-    transform: translateY(0); /* Sin desplazamiento */
-  }
-}
-
-/* Aplicar la animación a los elementos con la clase fade-in */
-.fade-in {
-  animation: fadeIn 0.5s ease-in-out; /* Duración y tipo de animación */
-}
-.encabezado-main {
-  font-weight: bolder;
-  margin-bottom: -15px;
-  color: rgb(0, 0, 0);
-  margin-right: 7rem;
-  margin-left: 7rem;
-}
-
-hr {
-  margin-right: 7rem;
-  margin-left: 7rem;
-  border: 1px solid #000000;
-  opacity: 1;
-}
-
-.container-main-carteras {
-  display: flex;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.cartera-grande {
-  margin-left: 7rem;
-  padding: 0;
-  max-width: 845px;
-  list-style: none;
-  text-align: start;
-}
-
-.listas-carteras-grandes {
-  margin-bottom: 4rem;
-  box-shadow: 0px 1px 10px 1px rgb(59, 59, 59);
-  background-color: rgba(0, 0, 0, 0.802);
-}
-
-.titulo-carteras-grandes {
-  color: white;
-  font-size: 2rem;
-  font-weight: bolder;
-  margin-top: 20px;
-  text-align: center;
-}
-.texto-carteras-grandes {
-    color: rgba(255, 255, 255, 0.786);
-  font-weight: 600;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.texto-carteras {
-  padding: 10px;
-}
-
-.container-carteras-chicas {
-  display: flex;
-  flex-direction: column;
-  margin-left: 2rem;
-  margin-bottom: 1rem;
-}
-
-.carteras-chicas-2 {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 2rem 0;
-  text-align: start;
-  padding: 0;
-}
-
-.listas-carteras-chicas {
-  list-style: none;
-  margin: 0 2rem 2rem 2rem;
-  max-width: 350px;
-  box-shadow: 0px 1px 10px 1px rgb(59, 59, 59);
-  background-color: rgba(0, 0, 0, 0.802);
-}
-
-.titulo-carteras {
-  text-align: center;
-  color: white;
-  font-weight: bolder;
-  margin-top: 20px;
-}
-
-.texto-carteras-chicas{
-    color: rgba(255, 255, 255, 0.786);
-}
-
-
-/* Estilos para los elementos li */
-.item {
-  position: relative;
-  transition: transform 0.3s, background-color 0.3s;
-  z-index: 1;
-  cursor: pointer;
-  height: 588px;
-}
-
-/* Estilos para hover */
-.item:hover {
-  transform: scale(1.02);
-}
-/* Añadir un nuevo estilo */
-.item-overlay-active {
+/* Estilos para la flecha de scroll */
+.arrow {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto; /* Agregar desplazamiento vertical si el contenido es demasiado largo */
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg); /* Ajuste para que la flecha apunte hacia abajo */
+  width: 30px;
+  height: 30px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  animation: bounce 2s infinite;
+  transition: opacity 0.5s;
+  cursor: pointer;
 }
 
-#overlayContent {
+/* Animación de la flecha */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(45deg); /* Mantener la rotación durante el rebote */
+  }
+  40% {
+      transform: translateY(-10px) rotate(45deg);
+  }
+  60% {
+      transform: translateY(-5px) rotate(45deg);
+  }
+}
+
+/* Estilos para la galería */
+.gallery {
+  margin-top: 150px;
+  padding-top: 15px;
+  background-color: #eae7e7;
+  padding-bottom: 50px;
+}
+
+.gallery .titlepage {
+  text-align: center;
+}
+
+.gallery .titlepage p {
+  color: #2a2b2a;
+  display: block;
+  padding-top: 20px;
+}
+
+.gallery .gallery_img {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.gallery .gallery_img figure {
+  margin: 0;
+}
+
+.gallery .gallery_img figure img {
+  width: 100%;
+  transition: all .5s;
+}
+
+.gallery .gallery_img figure img:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.gallery_text {
+  text-align: center;
+  background-color: #2a2b2a;
+  height: 369px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 700px;
+  justify-content: center;
+}
+
+.galleryh3 h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.galleryh3 p {
+  font-size: 17px;
+  line-height: 31px;
+  color: #fff;
+}
+
+.container{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.servicios{
+  margin-top: 5rem;
+}
+
+.art-serv-back{
+  text-align: center;
+}
+
+.card {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: #fff;
+  margin: 20px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
 }
 
 .overlay {
-  display: none; /* Oculto por defecto */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width:100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
-.overlay.active {
-  display: flex; /* Mostrar overlay al tener clase "active" */
-}
-
-.overlay-content {
-  background-color: #060606c3;
+.fullscreen-card {
+  width: 20%;
+  height: 55%;
+  background-color: #fff;
   padding: 20px;
-  border-radius: 10px;
-  max-width: 60%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
   position: relative;
-  overflow: hidden;
-  box-sizing: content-box; /* Cambiar el modelo de caja para este elemento */
+  z-index: 1001;
 }
 
-.overlay-image {
-  max-width: 70%;
-}
-
-.overlay-image img {
-  max-width: 100%;
-  height: auto;
-}
-
-.overlay-text {
-  max-width: 70%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-
-.overlay-text h6 {
-    text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  padding: 10px;
-}
-
-.overlay-text p {
-  text-align: justify;
-  line-height: 1.6;
-}
-
-.close-btn {
+.close-1, .close-2, .close-3 {
   position: absolute;
   top: 10px;
   right: 20px;
-  font-size: 2rem;
+  font-size: 24px;
   cursor: pointer;
-  color: #000;
-  z-index: 1100; /* Asegurar que el botón esté encima del overlay */
+  color: #ff0000;
 }
 
-.close-btn:hover {
-  color: red; /* Cambiar color al pasar el mouse */
+.section-contactanos{
+  margin-top: 150px;
+  padding-top: 15px;
+  background-color: #eae7e7;
+  padding-bottom: 50px; 
 }
 
-.container-divisor {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+.container-contactanos-align{
+  margin-top: 4rem;
+  text-align: center;
 }
 
 .art-segunda-pag {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.art-serv-back {
-  background-color: #9d9d9d56;
-  max-height: 700px;
-  padding: 1rem 0 5rem 0;
+.container-mail{
+  backdrop-filter: blur(10px);
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 30px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  display: flex;
+  width: 950px;
+  justify-content: space-between;
+}
+
+.container-info-mail{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-info-contacto{
+  display: flex;
+  align-items: center;
+  list-style: none;
   margin-bottom: 3rem;
 }
 
-.carousel-container {
-  max-width: 80%; /* Ajusta el ancho del contenedor del carrusel */
-  margin: 0 auto; /* Centra el contenedor del carrusel */
+.form-group {
+  position: relative;
 }
 
-.carousel-inner img {
-  max-height: 500px; /* Ajusta la altura máxima de las imágenes del carrusel */
-  object-fit: cover; /* Ajusta el modo de ajuste de las imágenes para que se vean bien dentro del carrusel */
+.form-group input,
+.form-group textarea {
+  border: none;
+  border-bottom: 2px solid black;
+  margin-bottom: 10px;
+  outline: none; /* Elimina el borde de foco predeterminado */
+  background-color: #eae7e7 ;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-  width: 10%;
-  background-color: black;
+/* Estilo para los inputs y textarea cuando están en foco */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: #ffa500; /* Cambia el color del borde inferior al estar en foco */
 }
 
-.contact-form-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 2rem 0;
-  padding: 1rem;
-  border: 1px solid rgb(0, 0, 0);
-  box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
-  backdrop-filter: blur(20px);
-  width: 80%;
-  max-width: 400px;
-  color: rgb(0, 0, 0);
-  font-family: "ArcadeClassic", sans-serif;
-}
-
-.contact-form-title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+/* Pseudoelemento para crear un borde inferior en foco */
+.form-group input:focus::after,
+.form-group textarea:focus::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: orange; /* Color del borde inferior en foco */
 }
 
 .form-group {
@@ -373,23 +364,17 @@ hr {
   flex-direction: column;
 }
 
-/* Media Query para dispositivos móviles */
-@media (max-width: 768px) {
-  .container-header {
-    flex-direction: row;
-    align-items: center;
-  }
+button[type="button"] {
+  background-color: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px; /* Espacio entre los botones */
+}
 
-  main {
-    margin: 2rem 1rem 0 1rem;
-  }
-
-  .container-main-carteras {
-    flex-direction: column;
-  }
-
-  .cartera-grande,
-  .carteras-chicas-2 {
-    width: 100%;
-  }
+button[type="button"]:hover {
+  background-color: #128C7E;
 }
