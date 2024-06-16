@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (index < text.length) {
           typewriterElement.innerHTML += text.charAt(index);
           index++;
-          setTimeout(typeWriter, 20); // Cambia el número para ajustar la velocidad
+          setTimeout(typeWriter, 30); // Cambia el número para ajustar la velocidad
       }
   }
 
