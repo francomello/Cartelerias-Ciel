@@ -202,7 +202,7 @@ button:hover{
 .gallery {
   margin-top: 150px;
   padding-top: 15px;
-  background-color: #eae7e7;
+  background-color: #939393b9;
   padding-bottom: 50px;
 }
 
@@ -274,9 +274,10 @@ button:hover{
 .card {
   transition: transform 0.3s ease;
   cursor: pointer;
-  border: 1px solid #ccc;
+  border: 1px solid #0000002e;
   padding: 16px;
-  background-color: #fff;
+  background-color:  #9393937f;
+  box-shadow: 3px 3px 10px black;
   margin: 20px;
   height: 525px;
 }
@@ -335,7 +336,7 @@ button:hover{
 .section-contactanos {
   margin-top: 150px;
   padding-top: 15px;
-  background-color: #eae7e7;
+  background-color: #c0c0c0;
   padding-bottom: 50px;
 }
 
@@ -390,7 +391,7 @@ button:hover{
   border-bottom: 2px solid black;
   margin-bottom: 10px;
   outline: none; /* Elimina el borde de foco predeterminado */
-  background-color: #eae7e7;
+  background-color: transparent;
 }
 
 /* Estilo para los inputs y textarea cuando están en foco */
