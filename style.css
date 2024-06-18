@@ -424,6 +424,13 @@ button:hover{
   place-content: center;
 }
 
+footer{
+  text-align: center;
+  background-color: #000;
+  padding: 25px;
+  color: white;
+}
+
 @media (max-width: 768px) {
 
   /*Estilos para header*/
@@ -448,10 +455,10 @@ button:hover{
   }
 
   .sobre-nosotros {
-    min-width: 400px;
-    max-width: 400px;
+    min-width: 380px;
+    max-width: 380px;
     height: 30vh;
-    margin: 1rem 1rem;
+    margin: 1rem 0.3rem;
     background-color: #000;
     border-radius: 100px;
     display: flex;
@@ -461,11 +468,11 @@ button:hover{
   .imagen-nosotros {
     border-radius: 100px;
     width: 120px;
-    padding: 5px;
+    padding: 0px;
   }
 
   #typewriter {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     text-align: center;
     padding: 10px;
@@ -607,7 +614,7 @@ button:hover{
 
   .fullscreen-card {
     width: 85%;
-    height: 50%;
+    height: 55%;
     background-color: #fff;
     padding: 20px;
     position: relative;
@@ -646,16 +653,20 @@ button:hover{
     align-items: center;
   }
 
+  .titulo-contactanos{
+    font-size: 3.5rem;
+  }
+
   .container-mail {
     backdrop-filter: blur(10px);
-    margin-top: 4rem;
+    margin-top: 1rem;
     margin-bottom: 4rem;
     padding: 15px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 350px;
     justify-content: space-between;
   }
 
