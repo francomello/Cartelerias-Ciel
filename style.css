@@ -274,9 +274,9 @@ button:hover{
 .card {
   transition: transform 0.3s ease;
   cursor: pointer;
-  border: 1px solid #0000002e;
+  border: 1px solid #ccc;
   padding: 16px;
-  background-color:  #9393937f;
+  background-color: #fff;
   box-shadow: 3px 3px 10px black;
   margin: 20px;
   height: 525px;
